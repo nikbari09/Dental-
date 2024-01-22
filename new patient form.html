@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>new patient form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	</head>
+<style>
+div{
+	font-size:20px;
+	text-align:left;
+}
+button{
+	width:10%;
+	color:black;
+	}
+form{
+	background-color:#f2f2f2;
+	
+	border-radius:25px;
+}
+.app-time {
+  border: 1px solid #fff;
+  padding: 20px 30px;
+  box-shadow: 2px 4px 10px 0px #c7cacce3;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #fff;
+  border: 1px solid #999;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #e5e7eb;
+}
+.option-input:checked {
+  border: 1px solid #fff;
+}
+.option-input:checked::before {
+  color: #d9486d;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 12px;
+  left: 4px;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+.app-check {
+  display: flex;
+}
+.app-border {
+  border: 1px solid #ece9e9;
+  border-radius: 7px;
+  padding: 5px 7px 5px 9px;
+  padding-left: 40px;
+  min-height: 30px;
+}
+
+.option-input.radio:checked + .app-border {
+  background: #d9486d;
+}
+.option-input.radio:disabled,
+.option-input.radio:disabled + .app-border {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.app-label {
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+
+</style>
+<body>
+
+	<form action="/action_page.php" method="post">
+		<div style="font-size:22px;"><h3><center><b>PATIENT INFORMATION</b></center></h3></div>
+		
+		<div style="padding-right:10%;"><lable for="patient name">Patient Name:</lable>
+		<input type="text" name="patient name" id="patient name" placeholder="Enter your name" required></input></div>
+
+		<div style="padding-top:10px; padding-right:16%;">Birthdate:
+		<input type="date" required></div>
+
+		<div style="padding-top:10px; padding-right:14%;">Gender:
+		<input type="radio" name="gender" id="male" required></input>
+		<lable for="male">Male</lable>
+		<input type="radio" name="gender" id="female"></input>
+		<lable for="female">Female</lable></div>
+		
+		<div style="padding-top:10px; padding-right:7%;">Married Status:
+		<input type="radio" name="married" id="married"></input>
+		<lable for="married">Married</lable>
+		<input type="radio" name="married" id="unmarried"></input>
+		<lable for="unmarried">Unmarried</lable>
+		</div>
+
+		<div style="padding-top:10px; padding-right:9%; ">Mobile Number:
+		<input type="text" name="number" id="number" placeholder="Enter your number" maxlength="10" required></input>
+		</div>
+
+		<div style="padding-top:10px; padding-right:7%; ">Whatsapp Number:
+		<input type="text" name="number" id="number" placeholder="Enter your number" maxlength="10" required></input>
+		</div>
+	
+		<div style="padding-top:10px; padding-right:13%; ">
+		<lable for="mail">E-mail:</lable>
+		<input type="email" name="mail" id="mail" placeholder="hello@gmail.com"></input>
+		</div>
+		
+		
+		
+		<div style="padding-top:10px; ">Preferred contact method:
+		<input type="checkbox" name="method" id="email" required></input>
+		<lable for="email">E-mail</lable>
+		<input type="checkbox" name="method" id="mobile number" required></input>
+		<lable for="mobile number">Mobile Number</lable>
+		<input type="checkbox" name="method" id="whatsapp" required></input>
+		<lable for="whatsapp">Whatsapp</lable>
+		</div>
+	
+		<div style="padding-top:10px; padding-right:14%;">How did you hear about us ?
+			<div style="padding-left:0px;"><textarea name="write" id="write" row="4" cols="50"></textarea></div>
+		</div>
+
+		<div style="padding-top:10px; padding-right:12%;">Address1:
+		<input type="text" name="add" id="add" required></input><br>
+			<div style="padding-top:10px; padding-left:0%; ">Address2:
+			<input type="text" name="add2" id="add2" required></input><br></div>
+				<div style="padding-top:10px; padding-left:0%;">City:
+				<input type="text" name="city" id="city" required></input><br>
+				Pincode:
+				<input type="text" name="pin" id="pin" required></input><br>
+				State:
+				<input type="text" name="state" id="state" required></input>
+				</div>
+		
+		</div>
+	
+		<div style="padding-top:10px; padding-right:13%;">
+		<lable for="date">Schedule date:</lable>
+		<input type="date" required></div>
+			
+  <div style="padding-top:10px; padding-right:20%;">
+    <p>Timings</p>
+    <p>9:00AM to 12:00PM</p>
+    <div class="app-check">
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">9:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">9:30 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">10:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">10:30 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">11:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">11:30 AM
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>Timings</p>
+    <p>1:00PM to 5:00PM</p>
+    <div class="app-check">
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">1:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"/>
+      <div class="app-border">
+
+        <label class="app-label">1:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">2:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">2:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">3:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">3:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">4:00 PM
+        </label>
+      </div>
+
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">4:30 PM
+        </label>
+      </div>
+
+    </div>
+  </div>
+</div>
+		
+		</div>
+
+		<div style="padding-top:20px; padding-right:1%; font-size:24px; " >
+		<input style="width:10%; font:bold;" type="reset" value="reset">
+		<button type="button" onclick="document.location='basic question.html'"><b>Next</b></button>
+		</div>
+		
+	</form>
+</body>
+</html>
